@@ -552,7 +552,7 @@ def run_per_user_threshold_mode(files: Dict[str, Dict[str, List[str]]], split_ra
     print(f"Accuracy = {accuracy:.4f}")
     print(f"FAR      = {FAR:.4f}")
     print(f"FRR      = {FRR:.4f}")
-    print(f"EER      = {EER:.4f}")
+    #print(f"EER      = {EER:.4f}")
 
 
 # ============================================================
@@ -562,7 +562,7 @@ def run_per_user_threshold_mode(files: Dict[str, Dict[str, List[str]]], split_ra
 def main():
     print("\n=== BlowLive Liveness Evaluation ===")
     print(f"Dataset root : {DATASET_ROOT}")
-    print(f"Train/Test split ratio: {SPLIT_RATIO}")
+    #print(f"Train/Test split ratio: {SPLIT_RATIO}")
     print("\nModes:")
     print("  1. Global Threshold")
     print("  2. Per-User Dynamic Threshold")
