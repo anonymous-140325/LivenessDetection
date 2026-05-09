@@ -545,14 +545,15 @@ def run_per_user_threshold_mode(files: Dict[str, Dict[str, List[str]]], split_ra
     accuracy = (TP + TN) / total if total else 0.0
     FAR = FP / (FP + TN) if (FP + TN) > 0 else 0.0
     FRR = FN / (TP + FN) if (TP + FN) > 0 else 0.0
-    EER = compute_eer(test_scores_aligned, test_labels) if len(test_scores_aligned) > 0 else 0.0
+    #EER = compute_eer(test_scores_aligned, test_labels) if len(test_scores_aligned) > 0 else 0.0
+    EER = (FAR + FRR) / 2
 
     print("\n===== PER-USER THRESHOLD RESULTS =====")
     print(f"TP={TP}, FN={FN}, TN={TN}, FP={FP}")
     print(f"Accuracy = {accuracy:.4f}")
     print(f"FAR      = {FAR:.4f}")
     print(f"FRR      = {FRR:.4f}")
-    #print(f"EER      = {EER:.4f}")
+    print(f"EER      = {EER:.4f}")
 
 
 # ============================================================
